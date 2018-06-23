@@ -55,9 +55,14 @@
                 android:text="Submit"
                 android:textStyle="bold" />
 
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2sp"
+                android:background="#bb86fc" />
+
             <TextView
                 android:id="@+id/search_result"
-                android:textSize="15sp"
+                android:textSize="18sp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="Search Result"/>

@@ -61,7 +61,8 @@ public class SearchActivity extends AppCompatActivity {
 
                 StringBuilder temp = new StringBuilder();
                 for (int i = 0; i < result.size(); ++i) {
-                    temp.append(String.format("%d: %s\n", i + 1, result.get(i)));
+                    temp.append(String.format("%d: %s\n-----------------------------------------\n",
+                            i + 1, result.get(i)));
                 }
 
                 searchResult.setText(temp.toString());
