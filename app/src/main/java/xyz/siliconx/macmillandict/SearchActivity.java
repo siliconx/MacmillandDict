@@ -26,18 +26,18 @@ public class SearchActivity extends AppCompatActivity {
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                final String word = autoCompleteTextView.getText().toString();
+                if (word == null || word.length() == 0) {
+                    return;
+                }
+
                 Toast.makeText(SearchActivity.this, "Searching...", Toast.LENGTH_SHORT).show();
-                getResult();
+                getResult(word);
             }
         });
     }
 
-    private void getResult() {
-        final String word = autoCompleteTextView.getText().toString();
-        if (word == null || word.length() == 0) {
-            return;
-        }
-
+    private void getResult(final String word) {
         new Thread(new Runnable() {
             @Override
             public void run() {
